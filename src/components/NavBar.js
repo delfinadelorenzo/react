@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <div>
       <Navbar bg="light" expand="lg" >
-        <Container >
+        <Container fluid >
           <Navbar.Brand href="#home">B R A V E  Swimwear</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -17,9 +17,10 @@ export default function NavBar() {
                 <NavDropdown.Item href="#action/3.3">Summer Sale!</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="#link">Como comprar</Nav.Link>
-              <Container fluid>
-              <CartWidget />
-              </Container>
+            </Nav>
+            <div> <CartWidget/></div>
+            <Nav>
+
             </Nav>
           </Navbar.Collapse>
         </Container>
