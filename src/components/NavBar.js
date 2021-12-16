@@ -16,9 +16,6 @@ export default function NavBar() {
           <NavDropdown.Item href="#action/3.3">Summer Sale!</NavDropdown.Item>
         </NavDropdown>
         <Nav.Link href="#link">Como comprar</Nav.Link>
-
-
-
       </Nav>
     </Navbar.Collapse>
   </Container>
