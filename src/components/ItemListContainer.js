@@ -11,4 +11,4 @@ const ItemListContainer = ({description, price}) => {
     )
 }
 
-export default ItemListContainer
+export default ItemListContainer;
