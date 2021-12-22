@@ -1,13 +1,15 @@
 import React, {useState, useEffect} from 'react'
+import Item from './Item';
 
 /*IMAGENES*/
 import cies1 from "../imagenes/bikiniCies1.jpg";
 import granadina from "../imagenes/bikiniGranadina1.jpg"
 
 const ItemList = () => {
-    const [Items, setItems] = useState ([]);
+    const [items, setItems] = useState ([]);
+    const [loading, setLoading] = useState(false);
     
-    const cargarProductos =async () => {
+    const cargarProductos = async () => {
         const prod = await new Promise ((resolve, reject) => {
             setTimeout(function (){
                 resolve ([
@@ -32,11 +34,24 @@ const ItemList = () => {
     };
     
     useEffect(() => {
-        effect
-        return () => {
-            cleanup
-        }
-    }, [input])
+        const getItems = async () => {
+            setLoading (true);
+            const result = await cargarProductos ();
+            setLoading (false);
+            setItems (result);
+        };
+        getItems();
+    }, []);
+
+    return (
+        <ContainerItemList>
+            {items.map ((Item) => {
+                return <Item key={item.id} item={item}/>
+            }
+            )}
+        </ContainerItemList>
+    );
+
 
 
 
