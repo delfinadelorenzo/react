@@ -1,47 +1,53 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
+import ItemCount from './ItemCount'
+
 
 const Item = ({ item }) => {
+    console.log(item.pictureUrl, item.tittle)
     return (
-        <ContainerItem>
-            <div>
-                <Card style={{ width: '18rem' }}>
+        // <ContainerItem>
+        <div className='p-2'>
+            <Card style={{ width: '18rem' }}>
 
-                    <Card.Img src={item.pictureUrl}> </Card.Img>
+                <img src={item.pictureUrl} />
 
-                    <Card.Body>
-                        <div>
+                <Card.Body>
+                    <div className='tittle'>
 
-                            <span>
-                                <Card.Title> {item.tittle} </Card.Title>
-                            </span>
+                        <span>
+                            <Card.Title> {item.tittle} </Card.Title>
+                        </span>
 
-                        </div>
+                    </div>
 
-                        <div>
-                            <span>
-                                <Card.Text>  {item.description}   </Card.Text>
-                            </span>
+                    <div>
+                        <span>
+                            <Card.Text>  {item.description}   </Card.Text>
+                        </span>
 
-                            <span>
-                                <Card.Text>  {item.price}   </Card.Text>
-                            </span>
+                        <span className='precio'>
+                            <Card.Text>  {item.price}   </Card.Text>
+                        </span>
 
-                        </div>
+                    </div>
+                    <div>
+                        <span> <Card.Text> Stock disponible: {item.stock} </Card.Text> </span>
+                    </div>
 
-                        <div>
-                            <span>
-                                <Button variant="primary">Go somewhere</Button>
-                            </span>
+                    <div>
+                        <span>
+                            <ItemCount />
+                        </span>
 
-                        </div>
+                    </div>
 
-                    </Card.Body>
-                </Card>
-            </div>
+                </Card.Body>
+            </Card>
+        </div>
 
 
-        </ContainerItem>
+        // </ContainerItem>
 
     )
 }

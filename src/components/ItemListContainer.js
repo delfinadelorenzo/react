@@ -4,10 +4,10 @@ import ItemList from './ItemList'
 
 const ItemListContainer = () => {
     return (
-    <ListItemC>
+    <>
         <ItemList/>
         <ItemCount/>
-    </ListItemC>
+    </>
     )
 }
 

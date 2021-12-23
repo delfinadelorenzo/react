@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.tittle{
+  font-family: sans-serif;
+  font-size: 25px;
+  color: pink;
+  letter-spacing: 5px;
+}
+.precio{
+  color: #df75be;
+    font-size: 22px;
+}
