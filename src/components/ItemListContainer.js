@@ -1,14 +1,15 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import ItemCount from './ItemCount'
+import ItemList from './ItemList'
 
-const ItemListContainer = ({description, price}) => {
+const ItemListContainer = () => {
     return (
-        <Card>
-            <div>Producto: {description} </div>
-            <div>Precio: {price} </div>
-        </Card>
-
+    <ListItemC>
+        <ItemList/>
+        <ItemCount/>
+    </ListItemC>
     )
 }
 
-export default ItemListContainer;
+export default ItemListContainer
+
