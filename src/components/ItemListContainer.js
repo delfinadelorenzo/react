@@ -1,13 +1,10 @@
 import React from 'react'
 import ItemList from './ItemList'
 
-const ItemListContainer = (props) => {
-    const { tipo } = props;
+
+const ItemListContainer = () => {
     return (
-        <>
-            <h1>{tipo}</h1>
-            <ItemList />
-        </>
+        <ItemList/>
     )
 }
 

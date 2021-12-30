@@ -9,6 +9,7 @@ import EnterizaMy from "../imagenes/enetrizaMy.jpg"
 const bikinis = [
     {
         id: '1',
+        category:"bikinis",
         tipo:"bikinis",
         tittle: " Bikini Cies",
         price: "$1900",
@@ -18,6 +19,7 @@ const bikinis = [
     },
     {
         id: '2',
+        category:"bikinis",
         tipo:"bikinis",
         tittle: " Bikini Granadina",
         price: "$1790",
@@ -27,6 +29,7 @@ const bikinis = [
     },
     {
         id: '3',
+        category:"bikinis",
         tipo:"bikinis",
         tittle: " Bikini Saona",
         price: "$1990",
@@ -36,6 +39,7 @@ const bikinis = [
     },
     {
         id: '4',
+        category:"bikinis",
         tipo:"bikinis",
         tittle: "Bikini Granadina",
         price: "$1850",
@@ -45,6 +49,7 @@ const bikinis = [
     },
     {
         id: '5',
+        category:"enterizas",
         tipo:"enterizas",
         tittle: "Enteriza Red",
         price: "$1850",
@@ -54,6 +59,7 @@ const bikinis = [
     },
     {
         id: '6',
+        category:"enterizas",
         tipo:"enterizas",
         tittle: "Enteriza Sun",
         price: "$1850",
@@ -63,6 +69,7 @@ const bikinis = [
     },
     {
         id: '7',
+        category:"enterizas",
         tipo:"enterizas",
         tittle: "Enteriza My",
         price: "$1850",
