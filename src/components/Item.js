@@ -32,9 +32,9 @@ const Item = ({ item }) => {
                         </span>
 
                     </div>
-                    <div>
+                    {/* <div>
                         <span> <Card.Text> Stock disponible: {item.stock} </Card.Text> </span>
-                    </div>
+                    </div> */}
 
                     <div>
                         <span>

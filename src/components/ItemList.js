@@ -13,6 +13,7 @@ const ItemList = () => {
     const [loading, setLoading] = useState(false);
 
     const cargarProductos = async () => {
+        console.log (data)
         const prod = await new Promise((resolve, reject) => {
             setTimeout(function () {
                 resolve(data)

@@ -2,6 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
           <Route path="/bikinis" element={<ItemListContainer tipo="bikinis" />} />
           <Route path="/enterizas" element={<ItemListContainer tipo="enterizas" />} />
           <Route path="/summer" element={<ItemListContainer tipo="summer" />} />
-          <Route path="/detalle/:id" element={<ItemDetailContainer />}/>
+          <Route path="/detalle/:id" element={<ItemDetailContainer />}/> 
           <Route path="/comoComprar" element={<div>Como Comprar</div>}/>
         </Routes>
         <ItemListContainer />
