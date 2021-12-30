@@ -30,5 +30,29 @@
         "pictureUrl": "../imagenes/bikiniPal.jpg",
         "stock": 5,
         "description": "Bikini top SIN TAZA y Colaless tiro alto"
+    },
+    {
+        "id": 5,
+        "tittle": "Enteriza My",
+        "price": "$2000",
+        "pictureUrl": "../imagenes/enterizaMy.jpg",
+        "stock": 3,
+        "description": "Bikini  triángulo con tiras negras (lurex y lycra) "
+    },
+    {
+        "id": 6,
+        "tittle": "Enteriza Delf",
+        "price": "$2100",
+        "pictureUrl": "../imagenes/enteriza1.jepg",
+        "stock": 6,
+        "description": "Bikini  triángulo con tiras negras (lurex y lycra) "
+    },
+    {
+        "id": 7,
+        "tittle": "Enteriza Red",
+        "price": "$1990",
+        "pictureUrl": "../imagenes/enterizaRed.jpg",
+        "stock": 2,
+        "description": "Bikini  triángulo con tiras negras (lurex y lycra) "
     }
 ]
