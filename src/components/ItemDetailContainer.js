@@ -1,42 +1,32 @@
-//  import { useEffect, useState } from "react";
-//  import { useParams } from "react-router-dom";
-//  import data from "./data.json";
-//  import ItemDetail from "./ItemDetail";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom"
+import data from "./data.json"
+import ItemDetail from "./ItemDetail";
 
-//  const ItemDetailContainer = () => {
-//      const { id } = useParams();
-//      const [item, setItems] = useState([]);
-//      const [loading, setLoading] = useState(false);
+const ItemDetailContainer = () => {
+  const { id } = useParams();
+  const [item, setItem] = useState (data);
+  const [producto, setProducto] = useState();
 
-//      const cargarProductos = async () => {
-//          console.log(data)
-//          const prod = await new Promise((resolve, reject) => {
-//              setTimeout(function () {
-//                  resolve(data)
-//              }, 2000);
-//          })
-//          return prod;
-//      };
+  const loadItems = async () => {
+    const response = await new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(data[id]);
+      }, 2000);
+    });
 
-//      useEffect(() => {
-//          const getItems = async () => {
-//              setLoading(true);
-//              const result = await cargarProductos();
-//              setLoading(false);
-//              setItems(result);
-//          };
-//          getItems();
-//      }, []);
+    return response;
+  };
 
-//      return (
-//          productos[id] ? (
-//              <ItemDetail item={item} />
-//          ) : (
-//              <Link to="/detalle/:id" />
-//          ),
-//      ),
+  useEffect(() => {
+    const getData = async () => {
+      const result = await loadItems();
+      setProducto(result);
+    };
+    getData();
+  }, [loadItems]);
 
-//  }
+  return <div>DETALLE con id { id } | data  { JSON.stringify(producto) }</div>
+}
 
-
-//  export default ItemDetailContainer
+export default ItemDetailContainer
