@@ -1,13 +1,35 @@
-import React from 'react'
-
-const ItemDetail = ({item}) => {
+import { Row, Col } from "react-bootstrap"
+const ItemDetail = ({ item }) => {
+    console.log(item)
     return (
-        <div>
-            <div>
-            <img src={item.pictureUrl} />
-            </div>
+        <>
+            {item.map(item =>
+                <>
+                    <container>
+                        <Row>
 
-        </div>
+                            <Col>   
+                            <h3>{item.tittle}</h3>
+                            <img src={item.pictureUrl} alt={item.title} width={200} />
+                                
+                            </Col>
+                            <Col> 
+                            <div> 
+                                <p>Detalles del producto {item.description} </p>
+                            </div>
+                            <div>
+                                <p>Stock disponible {item.stock} </p>
+                            </div>
+
+                            </Col>
+
+                        </Row>
+                    </container>
+
+                </>
+            )
+            }
+        </>
     )
 }
 

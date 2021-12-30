@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Item from './Item';
-import data from "./data.json";
+import {data} from "./data.js";
 
 /*IMAGENES*/
 // import cies1 from "../imagenes/bikiniCies1.jpg";
@@ -10,36 +10,23 @@ import data from "./data.json";
 
 const ItemList = () => {
     const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(false);
-
-    const cargarProductos = async () => {
-        console.log (data)
-        const prod = await new Promise((resolve, reject) => {
-            setTimeout(function () {
-                resolve(data)
-            }, 2000);
-        })
-        return prod;
-    };
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const getItems = async () => {
-            setLoading(true);
-            const result = await cargarProductos();
-            setLoading(false);
-            setItems(result);
-        };
-        getItems();
-    }, []);
+        data
+            .then(items=>{setItems(items)})
+            .catch(err => console.log(err))
+            .finally(()=> setLoading(false))
+    }, [])
 
 return (
     <div className='d-flex justify-content-start'>
-        {items.map((item) =>{
-            return <Item key={item.id} item={item} />
-        } )}
+        {loading ? 
+            <h2>Cargando...</h2>
+            :
+            <Item items={items} />
+        }
     </div>
-);
-
-};
+)};
 
 export default ItemList;

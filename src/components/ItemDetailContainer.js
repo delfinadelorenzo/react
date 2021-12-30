@@ -1,32 +1,30 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
-import data from "./data.json"
-import ItemDetail from "./ItemDetail";
+import {useState, useEffect} from "react"
+import ItemDetail from "./ItemDetail"
+import {data} from "./data"
+import {useParams} from "react-router-dom"
 
 const ItemDetailContainer = () => {
-  const { id } = useParams();
-  const [item, setItem] = useState (data);
-  const [producto, setProducto] = useState();
+    const [item, setItem] = useState([])   
+    const {id} = useParams();
 
-  const loadItems = async () => {
-    const response = await new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(data[id]);
-      }, 2000);
-    });
+    useEffect(()=>{
+        data
+        .then((item)=>{
+            if(id){
+                const idProduct = item.filter((e)=> e.id === id)
+                setItem(idProduct)
+            }else{
+                setItem(item)
+            }
+        })
+        .catch((err)=> console.log(err))
+    }, [id])
 
-    return response;
-  };
-
-  useEffect(() => {
-    const getData = async () => {
-      const result = await loadItems();
-      setProducto(result);
-    };
-    getData();
-  }, [loadItems]);
-
-  return <div>DETALLE con id { id } | data  { JSON.stringify(producto) }</div>
+    return (
+        <>
+            <ItemDetail item={item}/>
+        </>
+    )
 }
 
 export default ItemDetailContainer
