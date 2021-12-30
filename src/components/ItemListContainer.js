@@ -1,13 +1,13 @@
 import React from 'react'
-import ItemCount from './ItemCount'
 import ItemList from './ItemList'
 
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
+    const { tipo } = props;
     return (
-    <>
-        <ItemList/>
-        <ItemCount/>
-    </>
+        <>
+            <h1>{tipo}</h1>
+            <ItemList />
+        </>
     )
 }
 

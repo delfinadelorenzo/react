@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "tittle": " Bikini Cies",
+        "price": "$1850",
+        "pictureUrl": "../imagenes/bikiniCies1.jpg",
+        "stock": 3,
+        "description": "Bikini  triángulo con tiras negras (lurex y lycra) "
+    },
+    {
+        "id": 2,
+        "tittle": " Bikini Granadina",
+        "price": "$1850",
+        "pictureUrl": "../imagenes/bikiniGranadina1.jpg",
+        "stock": 5,
+        "description": "Bikini  triángulo con tiras negras (lurex y lycra) "
+    },
+    {
+        "id": 3,
+        "tittle": " Bikini Saona",
+        "price": "$1850",
+        "pictureUrl": "../imagenes/bikiniSaona.jpeg",
+        "stock": 5,
+        "description": "Bikini  triángulo con tiras negras (lurex y lycra) "
+    },
+    {
+        "id": 4,
+        "tittle": " Bikini Granadina",
+        "price": "$1850",
+        "pictureUrl": "../imagenes/bikiniPal.jpg",
+        "stock": 5,
+        "description": "Bikini top SIN TAZA y Colaless tiro alto"
+    }
+]

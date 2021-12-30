@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import ItemCount from './ItemCount'
 
 
@@ -22,9 +23,9 @@ const Item = ({ item }) => {
                     </div>
 
                     <div>
-                        <span>
+                        {/* <span>
                             <Card.Text>  {item.description}   </Card.Text>
-                        </span>
+                        </span> */}
 
                         <span className='precio'>
                             <Card.Text>  {item.price}   </Card.Text>
@@ -39,6 +40,8 @@ const Item = ({ item }) => {
                         <span>
                             <ItemCount />
                         </span>
+                        <Link to={`/detalle/${item.id}`}>Ver Mas</Link>
+                        
 
                     </div>
 
