@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-import { Link  } from "react-router-dom"
+import { Link } from "react-router-dom"
 import ItemCount from './ItemCount'
 
 
@@ -9,11 +9,13 @@ const Item = ({ items }) => {
         // <ContainerItem>
         <>
             {
-                items.map(item=>
-                    <div className='p-2'>
+                items.map(item =>
+                    
+
+                    <div className='p-2 cards'>
                         <Card style={{ width: '18rem' }}>
 
-                            <img src={item.pictureUrl} alt={item.tittle}/>
+                            <img src={item.pictureUrl} alt={item.tittle} />
 
                             <Card.Body>
                                 <div className='tittle'>
@@ -40,17 +42,19 @@ const Item = ({ items }) => {
 
                                 <div>
 
-                                    <Link to={`/detalle/${item.id}`}>Ver Mas</Link>
-                                    
+                                    <Link to={`/detalle/${item.id}`}>+Info</Link>
+
 
                                 </div>
 
                             </Card.Body>
                         </Card>
                     </div>
-                    )
+
+
+                )
             }
-        
+
         </>
 
 

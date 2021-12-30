@@ -22,3 +22,11 @@ code {
   color: #df75be;
     font-size: 22px;
 }
+
+.cards{
+  display: flex!important;
+    flex-direction: row!important;
+    flex-wrap: wrap!important;
+    align-content: space-around!important;
+    justify-content: center!important;
+}
