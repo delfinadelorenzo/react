@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import ItemCount from './ItemCount'
+
 
 
 const Item = ({ item }) => {
@@ -37,9 +37,7 @@ const Item = ({ item }) => {
                     </div> */}
 
                     <div>
-                        <span>
-                            <ItemCount />
-                        </span>
+
                         <Link to={`/detalle/${item.id}`}>Ver Mas</Link>
                         
 

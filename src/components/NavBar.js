@@ -14,7 +14,7 @@ export default function NavBar() {
             <Nav className="me-auto">
               <NavDropdown title="Shop" id="basic-nav-dropdown">
                 <NavDropdown.Item > <Link to="/bikinis"> Bikinis </Link>  </NavDropdown.Item>
-                <NavDropdown.Item > <Link to="/enterizas"> Enterizas</Link>     </NavDropdown.Item>
+                <NavDropdown.Item > <Link to="/enterizas">Enteras</Link>     </NavDropdown.Item>
                 <NavDropdown.Item > <Link to="/summer">Summer Sale! </Link>   </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link> <Link to="/comocomprar">Como comprar</Link> </Nav.Link>
