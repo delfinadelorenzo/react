@@ -3,11 +3,6 @@ import Item from './Item';
 import { data } from "./data.js";
 import { useParams } from 'react-router-dom';
 
-/*IMAGENES*/
-// import cies1 from "../imagenes/bikiniCies1.jpg";
-// import granadina from "../imagenes/bikiniGranadina1.jpg"
-// import saona from "../imagenes/bikiniSaona.jpeg"
-// import pal from "../imagenes/bikiniPal.jpg"
 
 const ItemList = () => {
     const [items, setItems] = useState([]);

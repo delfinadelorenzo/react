@@ -1,26 +1,50 @@
-import { Row, Col } from "react-bootstrap"
+import { Row, Col} from "react-bootstrap"
+import ItemCount from "./ItemCount"
+import { useState, useEffect } from "react"
+
+
 const ItemDetail = ({ item }) => {
-    console.log(item)
-    return (
+
+ const [add, setAdd] = useState(false)
+ const onAdd = () =>{
+     setAdd(true)
+ }
+
+ useEffect(()=>{
+
+ }, [add])
+
+        return (
         <>
             {item.map(item =>
                 <>
                     <container>
-                        <Row>
+                        <Row >
 
-                            <Col>   
+                            <Col sm={8}>   
                             <h3>{item.tittle}</h3>
-                            <img src={item.pictureUrl} alt={item.title} width={200} />
+
+                            <img src={item.pictureUrl} alt={item.title} width={200}/>
+                            
                                 
                             </Col>
-                            <Col> 
-                            <div> 
+                            <Col sm={4}> 
+                            <div > 
+
                                 <p>Detalles del producto {item.description} </p>
+                                <p>Stock disponible {item.stock} </p>
+
+
                             </div>
                             <div>
-                                <p>Stock disponible {item.stock} </p>
-                            </div>
+                                {!add &&
+                                <ItemCount onAdd={onAdd} ></ItemCount>
+                                }
+                                {add &&
+                                    <button>Finalizar Compra</button>
+                                }
 
+                            </div>
                             </Col>
 
                         </Row>
