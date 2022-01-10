@@ -42,7 +42,7 @@ const ItemDetail = ({ item }) => {
                                 <ItemCount onAdd={onAdd} ></ItemCount>
                                 }
                                 {add &&
-                                    <Link to={"/carrito"}>Finalizar Compra</Link>
+                                    <Link to={"/cart"}>Finalizar Compra</Link>
                                 }
 
                             </div>
