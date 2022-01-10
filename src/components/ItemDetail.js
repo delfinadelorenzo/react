@@ -1,6 +1,7 @@
 import { Row, Col} from "react-bootstrap"
 import ItemCount from "./ItemCount"
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 
 const ItemDetail = ({ item }) => {
@@ -41,7 +42,7 @@ const ItemDetail = ({ item }) => {
                                 <ItemCount onAdd={onAdd} ></ItemCount>
                                 }
                                 {add &&
-                                    <button>Finalizar Compra</button>
+                                    <Link to={"/carrito"}>Finalizar Compra</Link>
                                 }
 
                             </div>
