@@ -17,7 +17,7 @@ const CartContextProvider = ({ children }) => {
   const addItem = (item, cantidad) => {
     let itemToAdd = Object.assign(item, { cantidad: cantidad });
 
-    // actualizar su cantidad.
+    // actualiza Cantidad.
     if (isInCart(itemToAdd.id)) {
       const updateItemsAdded = cart.addedItems.map((producto) => {
         if (producto.id === itemToAdd.id)
@@ -69,18 +69,14 @@ const CartContextProvider = ({ children }) => {
       addedItems: updateItemsAdded,
     });
   };
-
   const decrementTotalPrice = (item) => {
     let updateTotalPrice = 0;   
       return (updateTotalPrice += item.price * item.cantidad);
 
   };
-
-
   const clear = () => {
     setCart(initialState);
   };
-
   return (
     <CartContext.Provider
       value={{
