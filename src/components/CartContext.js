@@ -1,13 +1,11 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, createContext } from "react";
 
 
 const CartContext = createContext();
 
-const useCart = () => useContext(CartContext);
 
 const initialState = {
   addedItems: [],
-  totalPrice: 0,
 };
 
 const CartContextProvider = ({ children }) => {
@@ -15,7 +13,7 @@ const CartContextProvider = ({ children }) => {
 
 
   const addItem = (item, cantidad) => {
-    let itemToAdd = Object.assign(item, { cantidad: cantidad });
+    let itemToAdd = Object.assign(item, { cantidad });
 
     // actualiza Cantidad.
     if (isInCart(itemToAdd.id)) {
@@ -24,67 +22,72 @@ const CartContextProvider = ({ children }) => {
           return {
             ...producto,
             cantidad:
-              producto.cantidad < producto.stock
-                ? producto.cantidad + cantidad
-                : producto.stock,
+              producto.cantidad + cantidad <= producto.stock 
+              ? producto.cantidad + cantidad 
+              : producto.cantidad
           };
         return producto;
       });
       return setCart({
         addedItems: updateItemsAdded,
-        totalPrice: calculoTotalPrice(itemToAdd, cantidad),
       });
     }
 
     setCart({
       addedItems: [...cart.addedItems, itemToAdd],
-      totalPrice: calculoTotalPrice(itemToAdd, cantidad),
     });
   };
 
   const calculoTotalPrice = (item, cantidad) => {
-    return cart.totalPrice + item.price * cantidad;
+    return ( cart.addedItems || []).reduce (
+      (total , actual) => total + actual.price * actual.cantidad,
+      0
+    )
   };
 
   // ---------> VERIFICA SI UN ITEM ESTÁ EN EL CART <---------
   const isInCart = (id) => {
     return cart.addedItems.some((addedItem) => addedItem.id === id)
-      ? true
-      : false;
   };
 
   // ---------> REMOVER ITEM <---------
   const removeItem = (id) => {
-    let updateTotalPrice = 0;
-    const updateItemsAdded = cart.addedItems.filter((producto) => {
-      if (producto.id !== id) {
-        // Actualizo el precio total ya que se está eliminando
-        // un elemento con su cantidad seleccionada.
-        updateTotalPrice += decrementTotalPrice(producto);
-      }
-      return producto.id !== id;
-    });
-    setCart({
-      totalPrice: updateTotalPrice,
-      addedItems: updateItemsAdded,
-    });
+    const itemToDecrease = cart.addedItems.find (
+      (cartItem) => cartItem.id ===id
+    );
+    if (itemToDecrease.cantidad >1 ){
+      const updateItems = cart.addedItems.map((cartItem) => {
+        if (cartItem.id === id){
+          cartItem.cantidad = cartItem.cantidad - 1;
+        }
+        return cartItem;
+      });
+      setCart ({addedItems:updateItems})
+    } else {
+      setCart({
+        addedItems: cart.addedItems.filter((cartItem) => cartItem.id !== id),
+      });
+    }
   };
-  const decrementTotalPrice = (item) => {
-    let updateTotalPrice = 0;   
-      return (updateTotalPrice += item.price * item.cantidad);
-
-  };
+  
   const clear = () => {
     setCart(initialState);
   };
+
+  const calcularCantItems = () =>{
+    return cart.addedItems.reduce ((total,actual) =>{
+      return total + actual.cantidad;
+    }, 0);
+  }
   return (
     <CartContext.Provider
       value={{
         cart,
-        setCart,
         addItem,
         removeItem,
         clear,
+        cantItems: calcularCantItems(),
+        total : calculoTotalPrice (),
       }}
     >
       {children}
@@ -92,4 +95,4 @@ const CartContextProvider = ({ children }) => {
   );
 };
 
-export { CartContextProvider, useCart };
+export { CartContextProvider, CartContext };

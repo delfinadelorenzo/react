@@ -6,6 +6,7 @@ const CartWidget = () => {
     
         return (
             <IoCartOutline />
+            
         )
     
 }

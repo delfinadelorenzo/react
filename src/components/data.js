@@ -12,7 +12,7 @@ const bikinis = [
         category:"bikinis",
         tipo:"bikinis",
         tittle: " Bikini Cies",
-        price: "$1900",
+        price: 1900,
         pictureUrl: BikiniCies,
         stock: 3,
         description: "Bikini  triángulo con tiras negras (lurex y lycra) "
@@ -22,7 +22,7 @@ const bikinis = [
         category:"bikinis",
         tipo:"bikinis",
         tittle: " Bikini Granadina",
-        price: "$1790",
+        price: 1790,
         pictureUrl: BikiniGranadina,
         stock: 5,
         description: "Bikini  triángulo con tiras negras (lurex y lycra) "
@@ -32,7 +32,7 @@ const bikinis = [
         category:"bikinis",
         tipo:"bikinis",
         tittle: " Bikini Saona",
-        price: "$1990",
+        price: 1990,
         pictureUrl: BikiniPal,
         stock: 5,
         description: "Bikini  triángulo con tiras negras (lurex y lycra) "
@@ -42,7 +42,7 @@ const bikinis = [
         category:"bikinis",
         tipo:"bikinis",
         tittle: "Bikini Granadina",
-        price: "$1850",
+        price: 1850,
         pictureUrl: BikiniSaona,
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
@@ -52,7 +52,7 @@ const bikinis = [
         category:"enterizas",
         tipo:"enterizas",
         tittle: "Enteriza Red",
-        price: "$1850",
+        price: 1850,
         pictureUrl: EnterizaRed,
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
@@ -62,7 +62,7 @@ const bikinis = [
         category:"enterizas",
         tipo:"enterizas",
         tittle: "Enteriza Sun",
-        price: "$1850",
+        price: 1850,
         pictureUrl: EnterizaSun,
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
@@ -72,7 +72,7 @@ const bikinis = [
         category:"enterizas",
         tipo:"enterizas",
         tittle: "Enteriza My",
-        price: "$1850",
+        price: 1850,
         pictureUrl: EnterizaMy,
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"

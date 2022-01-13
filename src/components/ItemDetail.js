@@ -7,15 +7,15 @@ import { useCart } from "./CartContext"
 
 const ItemDetail = ({ item }) => {
 
-    const { addItem } = useCart();
-    const [add, setAdd] = useState()
-    const onAdd = (item, cantidad) => {
-        addItem(item, cantidad)        
-    }
+    // const { addItem } = useCart();
+    // const [add, setAdd] = useState()
+    // // const onAdd = (item, cantidad) => {
+    // //     addItem(item, cantidad)        
+    // // }
 
-    useEffect(() => {
+    // useEffect(() => {
 
-    }, [add])
+    // }, [add])
 
     return (
         <>
@@ -40,12 +40,12 @@ const ItemDetail = ({ item }) => {
 
                                 </div>
                                 <div>
-                                    {!add &&
+                                    {/* {!add &&
                                         <ItemCount onAdd={onAdd} ></ItemCount>
                                     }
                                     {add &&
                                         <Link to={"/cart"}>Finalizar Compra</Link>
-                                    }
+                                    } */}
 
                                 </div>
                             </Col>
