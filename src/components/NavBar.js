@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom'
+import { CartContext } from './CartContext'
 
 export default function NavBar() {
+  const { cantItems }= useContext (CartContext);
   return (
     <div>
       <Navbar bg="light" expand="lg" >
@@ -19,7 +21,10 @@ export default function NavBar() {
               </NavDropdown>
               <Nav.Link> <Link to="/comocomprar">Como comprar</Link> </Nav.Link>
             </Nav>
-            <div> <CartWidget /></div>
+            <Link to="/cart">
+              <CartWidget />
+              {cantItems > 0 ? cantItems : ""}
+            </Link>
             <Nav>
 
             </Nav>

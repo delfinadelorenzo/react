@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 
-function ItemCount({onAdd}) {
+function ItemCount({onAdd, item}) {
     const [count, SetCount] = useState(0)
 
     const aumentar = () => { SetCount(count + 1) }
@@ -11,28 +11,38 @@ function ItemCount({onAdd}) {
 
     return (
         <div style={{ textAlign: "center" }}>
-
-            <span style={{ display: "flow-root", color: "cornflowerblue", fontSize: "20px" }} > {count} </span>
+          <span
+            style={{
+              display: "flow-root",
+              color: "cornflowerblue",
+              fontSize: "20px",
+            }}
+          >
+            {count}
+          </span>
+          <div>
+            <button disabled={count === item.stock} onClick={aumentar}>
+              +
+            </button>
+    
+            <button disabled={count === 0} onClick={disminuir}>
+              -
+            </button>
+    
             <div>
-
-                <button onClick={aumentar}> + </button>
-
-                <button onClick={disminuir}> - </button>
-
-                <div>
-                <button onClick={reset}> Reset </button>
-                </div>
-
-                <div>
-                    <button onClick={onAdd} >Agregar al Carrito</button>
-                </div>
-
+              <button onClick={reset}> Reset </button>
             </div>
-
-
-        </div >
-    )
-
-}
-export default ItemCount
-
+    
+            <div>
+              <button
+                disabled={item.stock === 0}
+                onClick={() => onAdd(item, count)}
+              >
+                Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    export default ItemCount;
