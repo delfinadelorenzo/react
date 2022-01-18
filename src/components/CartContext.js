@@ -86,6 +86,7 @@ const CartContextProvider = ({ children }) => {
         addItem,
         removeItem,
         clear,
+        isInCart,
         cantItems: calcularCantItems(),
         total : calculoTotalPrice (),
       }}
