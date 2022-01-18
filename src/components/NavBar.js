@@ -3,15 +3,15 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom'
 import { CartContext } from './CartContext'
-import style from "../NavBar.sass"
+import  "./NavBar.scss"
 
 export default function NavBar() {
   const { cantItems }= useContext (CartContext);
   return (
     <div>
-      <Navbar bg="light" expand="lg" >
+      <Navbar className='navBar' >
         <Container fluid >
-          <Navbar.Brand> <Link to="/">B R A V E  Swimwear </Link></Navbar.Brand>
+          <Navbar.Brand> <Link to="/" className='HomePage' >B R A V E  Swimwear </Link></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
