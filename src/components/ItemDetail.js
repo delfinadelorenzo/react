@@ -8,7 +8,6 @@ import { CartContext } from "./CartContext"
 const ItemDetail = ({ item }) => {
 
   const { addItem, isInCart } = useContext(CartContext);
-  // const [add] = useState()
   const inCart = isInCart(item.id)
   console.log(inCart, item)
 
@@ -33,8 +32,9 @@ const ItemDetail = ({ item }) => {
               :
               <ItemCount item={item} onAdd={addItem}></ItemCount>
               }
-
-            <Link to={"/cart"}>Finalizar Compra</Link>
+          </div>
+          <div>
+          <Link to={"/cart"}>Finalizar Compra</Link>
           </div>
         </Col>
       </Row>
