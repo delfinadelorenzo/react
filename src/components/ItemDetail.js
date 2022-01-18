@@ -1,8 +1,10 @@
 import { Row, Col } from "react-bootstrap"
 import ItemCount from "./ItemCount"
-import { useState, useContext } from "react"
+import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "./CartContext"
+import "./ItemDetail.scss"
+
 
 
 const ItemDetail = ({ item }) => {
@@ -13,17 +15,20 @@ const ItemDetail = ({ item }) => {
 
 
   return item.map((item) => (
-    <container>
+    <div className="itemBody" >
       <Row>
-        <Col sm={8}>
-          <h3>{item.tittle}</h3>
-
-          <img src={item.pictureUrl} alt={item.title} width={200} />
+        <div>                    
+        <h3 className="titulo" >{item.tittle}</h3>
+        </div>
+        <Col>
+          <img className="fotoProducto" src={item.pictureUrl} alt={item.title} width={200} />
         </Col>
-        <Col sm={4}>
-          <div>
-            <p>Detalles del producto {item.description} </p>
-            <p>Stock disponible {item.stock} </p>
+        <Col >
+          <div className="detalleProduc" >
+            <p>Detalles del producto 
+            </p>
+            <p>  {item.description} </p>
+            {/* <p>Stock disponible {item.stock} </p> */}
           </div>
           <div>
             {isInCart(item.id)
@@ -38,7 +43,7 @@ const ItemDetail = ({ item }) => {
           </div>
         </Col>
       </Row>
-    </container>
+    </div>
   ));
 };
 
