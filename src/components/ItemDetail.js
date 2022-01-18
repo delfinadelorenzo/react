@@ -7,8 +7,9 @@ import { CartContext } from "./CartContext"
 
 const ItemDetail = ({ item }) => {
 
-    const { addItem } = useContext (CartContext);
+    const { addItem} = useContext (CartContext);
     const [add] = useState()
+
 
 
     return item.map((item) => (
@@ -25,7 +26,10 @@ const ItemDetail = ({ item }) => {
                 <p>Stock disponible {item.stock} </p>
               </div>
               <div>
-                {!add && <ItemCount item={item} onAdd={addItem}></ItemCount>}
+                {!add && <ItemCount item={item} 
+                onAdd={addItem}></ItemCount>
+                }
+
                 <Link to={"/cart"}>Finalizar Compra</Link>
               </div>
             </Col>

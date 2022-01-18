@@ -3,6 +3,7 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom'
 import { CartContext } from './CartContext'
+import style from "../NavBar.sass"
 
 export default function NavBar() {
   const { cantItems }= useContext (CartContext);

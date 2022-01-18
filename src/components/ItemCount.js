@@ -29,9 +29,9 @@ function ItemCount({onAdd, item}) {
               -
             </button>
     
-            <div>
+            {/* <div>
               <button onClick={reset}> Reset </button>
-            </div>
+            </div> */}
     
             <div>
               <button
