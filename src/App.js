@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
@@ -6,7 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Carrito from './components/Carrito';
 import { CartContextProvider } from './components/CartContext';
-
+import "./components/App.scss"
 
 function App() {
 

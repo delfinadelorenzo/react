@@ -15,14 +15,14 @@ export default function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <NavDropdown title="Shop" id="basic-nav-dropdown">
-                <NavDropdown.Item > <Link to="/category/bikinis"> Bikinis </Link>  </NavDropdown.Item>
-                <NavDropdown.Item > <Link to="/category/enterizas"> Enterizas</Link>     </NavDropdown.Item>
-                <NavDropdown.Item > <Link to="/category/summer">Summer Sale! </Link>   </NavDropdown.Item>
+              <NavDropdown title="Shop" id="basic-nav-dropdown" className='linkTo' >
+                <NavDropdown.Item > <Link to="/category/bikinis" className='linkTo' > Bikinis </Link>  </NavDropdown.Item>
+                <NavDropdown.Item > <Link to="/category/enterizas" className='linkTo' > Enterizas</Link>     </NavDropdown.Item>
+                <NavDropdown.Item > <Link to="/category/summer" className='linkTo' >Summer Sale! </Link>   </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link> <Link to="/comocomprar">Como comprar</Link> </Nav.Link>
+              <Nav.Link> <Link to="/comocomprar" className='linkTo' >Como comprar</Link> </Nav.Link>
             </Nav>
-            <Link to="/cart">
+            <Link to="/cart"  className='linkTo'>
               <CartWidget />
               {cantItems > 0 ? cantItems : ""}
             </Link>
