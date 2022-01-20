@@ -1,19 +1,15 @@
 import { storage } from "./Firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
-
 export const fileUpload = async (fileName) => {
     const myPreFile = await fetch(fileName)
     const myFile = await myPreFile.blob()
-
     //no testeado
     const metadata = {
         contentType: myFile.type
     };
-
     const storageRef = ref(storage, fileName);
     const uploadTask = uploadBytesResumable(storageRef, myFile, metadata);
-
     const uploadPromise = new Promise(res => {
         uploadTask.on('state_changed',
             (snapshot) => {
@@ -27,7 +23,7 @@ export const fileUpload = async (fileName) => {
                         console.log('upload is running');
                         break;
                 }
-            }, 
+            },
             (error) => {
                 switch (error.code) {
                     case 'storage/unauthorized':
@@ -44,7 +40,6 @@ export const fileUpload = async (fileName) => {
                     res(downloadURL)
                 });
             }
-
         )
     });
     return await uploadPromise

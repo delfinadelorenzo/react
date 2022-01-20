@@ -10,7 +10,7 @@ import "./components/App.scss"
 import { data } from "./components/data";
 import db from './firebase/Firebase';
 import { collection, addDoc } from 'firebase/firestore';
-import { fileUpload } from './firebase/Fileupload'
+import { fileUpload } from './firebase/fileUpload'
 
 
 function App() {
