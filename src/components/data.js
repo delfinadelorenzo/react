@@ -12,11 +12,11 @@ import SummerSaleSofi from "../imagenes/sumerSaleSofi.jpeg"
 import SummerSaleDelfi from "../imagenes/sumerSaleEnterizaDelfi.jpg"
 import SummerSaleCaro from "../imagenes/sumerSaleEnterizaCaro.jpg"
 
-const bikinis = [
+export const bikinis = [
     {
-        id: '1',
-        category:"bikinis",
-        tipo:"bikinis",
+         
+        category: "bikinis",
+        tipo: "bikinis",
         tittle: " Bikini Cies",
         price: 1900,
         pictureUrl: BikiniCies,
@@ -24,9 +24,9 @@ const bikinis = [
         description: "Bikini  triángulo con tiras negras (lurex y lycra) "
     },
     {
-        id: '2',
-        category:"bikinis",
-        tipo:"bikinis",
+         
+        category: "bikinis",
+        tipo: "bikinis",
         tittle: " Bikini Granadina",
         price: 1790,
         pictureUrl: BikiniGranadina,
@@ -34,9 +34,9 @@ const bikinis = [
         description: "Bikini  triángulo con tiras negras (lurex y lycra) "
     },
     {
-        id: '3',
-        category:"bikinis",
-        tipo:"bikinis",
+         
+        category: "bikinis",
+        tipo: "bikinis",
         tittle: " Bikini Saona",
         price: 1990,
         pictureUrl: BikiniPal,
@@ -44,9 +44,9 @@ const bikinis = [
         description: "Bikini  triángulo con tiras negras (lurex y lycra) "
     },
     {
-        id: '4',
-        category:"bikinis",
-        tipo:"bikinis",
+         
+        category: "bikinis",
+        tipo: "bikinis",
         tittle: "Bikini Granadina",
         price: 1850,
         pictureUrl: BikiniSaona,
@@ -54,9 +54,9 @@ const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        id: '5',
-        category:"enterizas",
-        tipo:"enterizas",
+    
+        category: "enterizas",
+        tipo: "enterizas",
         tittle: "Enteriza Red",
         price: 1850,
         pictureUrl: EnterizaRed,
@@ -64,9 +64,9 @@ const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        id: '6',
-        category:"enterizas",
-        tipo:"enterizas",
+         
+        category: "enterizas",
+        tipo: "enterizas",
         tittle: "Enteriza Sun",
         price: 1850,
         pictureUrl: EnterizaSun,
@@ -74,9 +74,9 @@ const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        id: '7',
-        category:"enterizas",
-        tipo:"enterizas",
+         
+        category: "enterizas",
+        tipo: "enterizas",
         tittle: "Enteriza My",
         price: 1850,
         pictureUrl: EnterizaMy,
@@ -84,9 +84,9 @@ const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        id: '8',
-        category:"summer",
-        tipo:"summer",
+    
+        category: "summer",
+        tipo: "summer",
         tittle: "Bikini Animal",
         price: 1850,
         pictureUrl: SummerSaleAnimal,
@@ -94,9 +94,9 @@ const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        id: '9',
-        category:"summer",
-        tipo:"summer",
+        
+        category: "summer",
+        tipo: "summer",
         tittle: "Bikini Love",
         price: 1850,
         pictureUrl: SummerSaleLove,
@@ -104,9 +104,9 @@ const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        id: '10',
-        category:"summer",
-        tipo:"summer",
+        
+        category: "summer",
+        tipo: "summer",
         tittle: "Bikini Manhattan",
         price: 1850,
         pictureUrl: SummerSaleManhattan,
@@ -114,9 +114,9 @@ const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        id: '11',
-        category:"summer",
-        tipo:"summer",
+        
+        category: "summer",
+        tipo: "summer",
         tittle: "Bikini Sofi",
         price: 1850,
         pictureUrl: SummerSaleSofi,
@@ -124,9 +124,9 @@ const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        id: '12',
-        category:"summer",
-        tipo:"summer",
+        
+        category: "summer",
+        tipo: "summer",
         tittle: "Enteriza Delfi",
         price: 1850,
         pictureUrl: SummerSaleDelfi,
@@ -134,25 +134,25 @@ const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        id: '13',
-        category:"summer",
-        tipo:"summer",
+        
+        category: "summer",
+        tipo: "summer",
         tittle: "Enteriza Caro",
         price: 1850,
         pictureUrl: SummerSaleCaro,
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
-    
+
 ]
 
-export const data = new Promise((res, rej)=>{
+export const data = new Promise((res, rej) => {
     let uno = "1"
-    if(uno === "1"){
-        setTimeout(()=>{
+    if (uno === "1") {
+        setTimeout(() => {
             res(bikinis)
         }, 2000)
-    }else{
+    } else {
         rej("Hubo un error al cargar los productos")
     }
 })

@@ -7,17 +7,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Carrito from './components/Carrito';
 import { CartContextProvider } from './components/CartContext';
 import "./components/App.scss"
-import { data } from "./components/data";
+import { bikinis } from "./components/data";
 import db from './firebase/Firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { fileUpload } from './firebase/fileUpload'
 
 
 function App() {
-  
+
+
   const arrayUpload = () =>{
-    data.forEach (async (element)=>{
-      const imgURL = await fileUpload (element.pictureUrl)
+    console.log(bikinis)
+    bikinis.forEach (async (element)=>{
+      const imgURL =  await fileUpload (element.pictureUrl)
       addDoc(collection(db, 'products'), {...element, pictureUrl: imgURL})
     })     
     
