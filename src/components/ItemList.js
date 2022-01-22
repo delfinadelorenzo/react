@@ -1,15 +1,11 @@
 import React from 'react'
-import Item  from './Item'
+import ItemListContainer from './ItemList'
 
 
-const ItemList = ({ items }) => {
+const ItemList = () => {
     return (
-        <>
-        {items?.map((item)=>
-        <Item {...item} key={item.id}/>
-        )}
-        </>
+        <ItemListContainer/>
     )
-};
-export default ItemList
+}
 
+export default ItemList
