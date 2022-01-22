@@ -15,29 +15,30 @@ const ItemListContainer = () => {
     console.log(idCategory);
 
     useEffect(() => {
-        bikinis
-            .then((res)=>{
-                if (idCategory){
-                    const categoriaFiltradas= res.filter((item)=> item.category.toLowerCase () ===idCategory)
-                    setItems(categoriaFiltradas)
-                }else{
-                    setItems(res)
-                }
-            })
-            .catch(err => console.log(err))
-       
-            .finally(() => setLoading(false))
-    }, [])
+        setLoading(true);
+        const getProducts= new Promise ( res => {
+            const myItems = idCategory ? bikinis.filter(item => item.category === idCategory) : bikinis;
+            setTimeout( ()=>{
+                res(myItems)
+            }, 1500)
+        })
 
-    return (
-        <div className='d-flex justify-content-start'>
-            {loading ?
-                <h2>Cargando...</h2>
-                :
-                <Item items={items} />
-            }
-        </div>
-    )
+        getProducts.then(products => setItems(products))
+        .finally(()=>{
+            setLoading(false);
+        });
+
+}, [idCategory]);
+
+return (
+    <div className='d-flex justify-content-start'>
+        {loading ?
+            <h2>Cargando...</h2>
+            :
+            <ItemList items={items} />
+        }
+    </div>
+)
 };
 
 export default ItemListContainer
