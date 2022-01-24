@@ -15,17 +15,12 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    bikinis
-      .then((item) => {
-        if (id) {
-          const idProduct = item.filter((e) => e.id === id)
-          setItem(idProduct)
-        } else {
-          setItem(item)
-        }
-      })
-      .catch((err) => console.log(err))
-  }, [id])
+    const getProuct = new Promise ((res) =>{
+      res(bikinis.find(item => item.id === id ))
+    })
+    getProuct.then (item => setItem(item))
+  }, []);
+    
 
   return (
     <>

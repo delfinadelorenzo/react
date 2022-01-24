@@ -1,7 +1,7 @@
 
 export const bikinis = [
     {
-         
+        id:'1',
         category: "bikinis",
         tipo: "bikinis",
         tittle: " Bikini Cies",
@@ -11,7 +11,7 @@ export const bikinis = [
         description: "Bikini  triángulo con tiras negras (lurex y lycra) "
     },
     {
-         
+        id:'2',
         category: "bikinis",
         tipo: "bikinis",
         tittle: " Bikini Granadina",
@@ -21,7 +21,7 @@ export const bikinis = [
         description: "Bikini  triángulo con tiras negras (lurex y lycra) "
     },
     {
-         
+        id:'3',
         category: "bikinis",
         tipo: "bikinis",
         tittle: " Bikini Pal",
@@ -31,7 +31,7 @@ export const bikinis = [
         description: "Bikini  triángulo con tiras negras (lurex y lycra) "
     },
     {
-         
+        id:'4',
         category: "bikinis",
         tipo: "bikinis",
         tittle: "Bikini Saona",
@@ -41,7 +41,7 @@ export const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-    
+        id:'5',
         category: "enterizas",
         tipo: "enterizas",
         tittle: "Enteriza Red",
@@ -51,7 +51,7 @@ export const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-         
+        id:'6',
         category: "enterizas",
         tipo: "enterizas",
         tittle: "Enteriza Sun",
@@ -61,7 +61,7 @@ export const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-         
+        id:'7',
         category: "enterizas",
         tipo: "enterizas",
         tittle: "Enteriza My",
@@ -71,7 +71,7 @@ export const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-    
+        id:'8',
         category: "summer",
         tipo: "summer",
         tittle: "Bikini Animal",
@@ -81,7 +81,7 @@ export const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        
+        id:'9',
         category: "summer",
         tipo: "summer",
         tittle: "Bikini Love",
@@ -91,7 +91,7 @@ export const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        
+        id:'10',
         category: "summer",
         tipo: "summer",
         tittle: "Bikini Manhattan",
@@ -101,7 +101,7 @@ export const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        
+        id:'11',
         category: "summer",
         tipo: "summer",
         tittle: "Bikini Sofi",
@@ -111,7 +111,7 @@ export const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        
+        id:'12',
         category: "summer",
         tipo: "summer",
         tittle: "Enteriza Delfi",
@@ -121,7 +121,7 @@ export const bikinis = [
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
     {
-        
+        id:'13',
         category: "summer",
         tipo: "summer",
         tittle: "Enteriza Caro",

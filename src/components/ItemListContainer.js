@@ -22,18 +22,15 @@ const ItemListContainer = () => {
             setTimeout( ()=>{
                 res(myItems)
             }, 1500)
-          })
-      
+          })      
           promise.then(products => setItems(products))
           .catch(error => console.log(error))
           .finally(()=>{
               setLoading(false);
           });
-        }
-      
+        }      
         getProducts()
       }, []);
-
  return (
     <div className='d-flex justify-content-start'>
         {loading ?
