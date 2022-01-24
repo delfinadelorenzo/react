@@ -16,21 +16,25 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         setLoading(true);
-        const getProducts= new Promise ( res => {
+        const getProducts = async()=> {
+            const promise= new Promise ( res => {
             const myItems = idCategory ? bikinis.filter(item => item.category === idCategory) : bikinis;
             setTimeout( ()=>{
                 res(myItems)
             }, 1500)
-        })
+          })
+      
+          promise.then(products => setItems(products))
+          .catch(error => console.log(error))
+          .finally(()=>{
+              setLoading(false);
+          });
+        }
+      
+        getProducts()
+      }, []);
 
-        getProducts.then(products => setItems(products))
-        .finally(()=>{
-            setLoading(false);
-        });
-
-}, [idCategory]);
-
-return (
+ return (
     <div className='d-flex justify-content-start'>
         {loading ?
             <h2>Cargando...</h2>
