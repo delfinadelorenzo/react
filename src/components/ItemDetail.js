@@ -6,11 +6,11 @@ import { CartContext } from "./CartContext"
 import "./ItemDetail.scss"
 
 
-
 const ItemDetail = ({ item }) => {
 
   const { addItem, isInCart } = useContext(CartContext);
   const inCart = isInCart(item.id)
+  console.log(item)
   console.log(inCart, item)
 
 
