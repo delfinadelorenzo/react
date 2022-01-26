@@ -6,7 +6,7 @@ export const bikinis = [
         tipo: "bikinis",
         tittle: " Bikini Cies",
         price: 1900,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/bikiniCies1.jpg",
+        pictureUrl: "/bikiniCies1.jpg",
         stock: 3,
         description: "Bikini  triángulo con tiras negras (lurex y lycra) "
     },
@@ -16,7 +16,7 @@ export const bikinis = [
         tipo: "bikinis",
         tittle: " Bikini Granadina",
         price: 1790,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/bikiniGranadina1.jpg",
+        pictureUrl: "/bikiniGranadina1.jpg",
         stock: 5,
         description: "Bikini  triángulo con tiras negras (lurex y lycra) "
     },
@@ -26,7 +26,7 @@ export const bikinis = [
         tipo: "bikinis",
         tittle: " Bikini Pal",
         price: 1990,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/bikiniPal.jpg",
+        pictureUrl: "/bikiniPal.jpg",
         stock: 5,
         description: "Bikini  triángulo con tiras negras (lurex y lycra) "
     },
@@ -36,7 +36,7 @@ export const bikinis = [
         tipo: "bikinis",
         tittle: "Bikini Saona",
         price: 1850,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/bikiniSaona.jpeg",
+        pictureUrl: "/bikiniSaona.jpeg",
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
@@ -46,7 +46,7 @@ export const bikinis = [
         tipo: "enterizas",
         tittle: "Enteriza Red",
         price: 1850,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/enterizaRed.jpg",
+        pictureUrl: "/enterizaRed.jpg",
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
@@ -56,7 +56,7 @@ export const bikinis = [
         tipo: "enterizas",
         tittle: "Enteriza Sun",
         price: 1850,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/enteriza1.jpeg",
+        pictureUrl: "/enteriza1.jpeg",
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
@@ -66,7 +66,7 @@ export const bikinis = [
         tipo: "enterizas",
         tittle: "Enteriza My",
         price: 1850,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/enetrizaMy.jpg",
+        pictureUrl: "/enetrizaMy.jpg",
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
@@ -76,7 +76,7 @@ export const bikinis = [
         tipo: "summer",
         tittle: "Bikini Animal",
         price: 1850,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/sumerSaleAnimal.jpeg",
+        pictureUrl: "/sumerSaleAnimal.jpeg",
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
@@ -86,7 +86,7 @@ export const bikinis = [
         tipo: "summer",
         tittle: "Bikini Love",
         price: 1850,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/sumerSaleLove.jpeg",
+        pictureUrl: "/sumerSaleLove.jpeg",
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
@@ -96,7 +96,7 @@ export const bikinis = [
         tipo: "summer",
         tittle: "Bikini Manhattan",
         price: 1850,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/sumerSaleManhattan.jpeg",
+        pictureUrl: "/sumerSaleManhattan.jpeg",
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
@@ -106,7 +106,7 @@ export const bikinis = [
         tipo: "summer",
         tittle: "Bikini Sofi",
         price: 1850,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/sumerSaleSofi.jpeg",
+        pictureUrl: "/sumerSaleSofi.jpeg",
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
@@ -116,7 +116,7 @@ export const bikinis = [
         tipo: "summer",
         tittle: "Enteriza Delfi",
         price: 1850,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/sumerSaleEnterizaDelfi.jpg",
+        pictureUrl: "/sumerSaleEnterizaDelfi.jpg",
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
@@ -126,7 +126,7 @@ export const bikinis = [
         tipo: "summer",
         tittle: "Enteriza Caro",
         price: 1850,
-        pictureUrl: "https://raw.githubusercontent.com/delfinadelorenzo/react/88fe244e4518be87e642df4bababacae9a036666/src/imagenes/sumerSaleEnterizaCaro.jpg",
+        pictureUrl: "/sumerSaleEnterizaCaro.jpg",
         stock: 5,
         description: "Bikini top SIN TAZA y Colaless tiro alto"
     },
