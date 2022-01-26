@@ -1,6 +1,6 @@
 import ItemList from './ItemList'
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import db from '../firebase/Firebase'
+import db from '../firebase/firebase'
 import React, { useState, useEffect } from 'react'
 import Item from './Item';
 import { bikinis } from "./data.js";

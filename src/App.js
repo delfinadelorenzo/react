@@ -8,7 +8,7 @@ import Carrito from './components/Carrito';
 import { CartContextProvider } from './components/CartContext';
 import "./components/App.scss"
 import { bikinis } from "./components/data";
-import db from './firebase/Firebase';
+import db from './firebase/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { fileUpload } from './firebase/fileUpload'
 
