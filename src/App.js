@@ -23,7 +23,7 @@ function App() {
   //      addDoc(collection(db, 'products'), { ...element, pictureUrl: imgURL })
   //    })
   //  }
-
+ 
 
 
   return (
