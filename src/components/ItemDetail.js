@@ -14,7 +14,7 @@ const ItemDetail = ({ item }) => {
   console.log(inCart, item)
 
 
-  return item.map((item) => (
+  return (
     <div className="itemBody" >
       <Row>
         <div>                    
@@ -44,7 +44,7 @@ const ItemDetail = ({ item }) => {
         </Col>
       </Row>
     </div>
-  ));
+  );
 };
 
 export default ItemDetail;

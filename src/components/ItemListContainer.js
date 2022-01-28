@@ -14,23 +14,31 @@ const ItemListContainer = () => {
     const { idCategory } = useParams();
     console.log(idCategory);
 
-    useEffect(() => {
+    useEffect(async () => {
         setLoading(true);
-        const getProducts = async()=> {
-            const promise= new Promise ( res => {
-            const myItems = idCategory ? bikinis.filter(item => item.category === idCategory) : bikinis;
-            setTimeout( ()=>{
-                res(myItems)
-            }, 1500)
-          })      
-          promise.then(products => setItems(products))
-          .catch(error => console.log(error))
-          .finally(()=>{
-              setLoading(false);
-          });
-        }      
-        getProducts()
-      }, []);
+    
+        const myItems = idCategory ?
+          query(collection(db, 'products'), where('category', '==', idCategory))
+          /* query(collection(db, 'products'), where('category', '==', idCategory), orderBy("name")) */
+          :
+          collection(db, 'products');
+    
+        try {
+          const querySnapshot = await getDocs(myItems)
+    
+          console.log(querySnapshot.docs)
+    
+          setItems(querySnapshot.docs.map(el => {
+            return { ...el.data(), id: el.id }
+          }))
+        }
+        catch {
+          console.log("SE ROMPIO")
+        }
+      
+        setLoading(false)
+    
+      }, [idCategory]);
  return (
     <div className='d-flex justify-content-start'>
         {loading ?

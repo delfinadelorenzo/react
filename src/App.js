@@ -16,13 +16,13 @@ import { fileUpload } from './firebase/fileUpload'
 function App() {
  
 
-  //  const arrayUpload = () => {
-  //    console.log(bikinis)
-  //    bikinis.forEach(async (element) => {
-  //      const imgURL = await fileUpload(element.pictureUrl)
-  //      addDoc(collection(db, 'products'), { ...element, pictureUrl: imgURL })
-  //    })
-  //  }
+    // const arrayUpload = () => {
+    //   console.log(bikinis)
+    //   bikinis.forEach(async (element) => {
+    //     const imgURL = await fileUpload(element.pictureUrl)
+    //     addDoc(collection(db, 'products'), { ...element, pictureUrl: imgURL })
+    //   })
+    // }
  
 
 
@@ -31,7 +31,7 @@ function App() {
       <Router>
         <div className="App">
           <NavBar />
-          {/* {<button onClick={arrayUpload}>subir cosas</button>}  */}
+           {/* {<button onClick={arrayUpload}>subir cosas</button>}   */}
           <Routes>
             <Route path="/" element={<div>HOME</div>} />
             <Route path="/category/:idCategory" element={<ItemListContainer/>} />
