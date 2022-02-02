@@ -21,7 +21,7 @@ const Carrito = () => {
             {cantItems > 0 && <button onClick={clear}>Vaciar carrito</button>}
 
             <Link to="/checkOut">
-                <button onClick>
+                <button>
                     Check out
                 </button>
             </Link>

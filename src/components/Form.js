@@ -18,7 +18,7 @@ export default function FormPropsTextFields() {
     const [orderId, setOrderId] = useState("");
     const [finCompra, setFinCompra] = useState(false);
 
-    const { cart, addItem} = useContext(CartContext);
+    const { cart, addItem } = useContext(CartContext);
 
     const total = addItem();
     const buyingDate = new Date();
