@@ -20,7 +20,7 @@ export default function FormPropsTextFields() {
 
     const { cart, addItem } = useContext(CartContext);
 
-    const total = addItem();
+   
     const buyingDate = new Date();
 
     const enviarDatos = () => {
@@ -43,7 +43,7 @@ export default function FormPropsTextFields() {
             },
 
             total: {
-                total: total,
+                total: addItem,
             },
         };
 
