@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "./CartContext";
+import { Link } from 'react-router-dom';
+import { Button } from "react-bootstrap";
 
 const Carrito = () => {
     const { cart, removeItem, total, clear, cantItems } = useContext(CartContext);
@@ -15,8 +17,14 @@ const Carrito = () => {
                     </div>
                 ))}
             </div>
-            {cantItems > 0 && <button onClick={clear}>Vaciar carrito</button>}
             <h4>Total: ${total}</h4>
+            {cantItems > 0 && <button onClick={clear}>Vaciar carrito</button>}
+
+            <Link to="/checkOut">
+                <button onClick>
+                    Check out
+                </button>
+            </Link>
         </div>
     );
 };

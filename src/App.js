@@ -5,6 +5,7 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Carrito from './components/Carrito';
+import Form from './components/Form'
 import { CartContextProvider } from './components/CartContext';
 import "./components/App.scss"
 import { bikinis } from "./components/data";
@@ -14,16 +15,16 @@ import { fileUpload } from './firebase/fileUpload'
 
 
 function App() {
- 
 
-    // const arrayUpload = () => {
-    //   console.log(bikinis)
-    //   bikinis.forEach(async (element) => {
-    //     const imgURL = await fileUpload(element.pictureUrl)
-    //     addDoc(collection(db, 'products'), { ...element, pictureUrl: imgURL })
-    //   })
-    // }
- 
+
+  // const arrayUpload = () => {
+  //   console.log(bikinis)
+  //   bikinis.forEach(async (element) => {
+  //     const imgURL = await fileUpload(element.pictureUrl)
+  //     addDoc(collection(db, 'products'), { ...element, pictureUrl: imgURL })
+  //   })
+  // }
+
 
 
   return (
@@ -31,13 +32,14 @@ function App() {
       <Router>
         <div className="App">
           <NavBar />
-           {/* {<button onClick={arrayUpload}>subir cosas</button>}   */}
+          {/* {<button onClick={arrayUpload}>subir cosas</button>}   */}
           <Routes>
             <Route path="/" element={<div>HOME</div>} />
-            <Route path="/category/:idCategory" element={<ItemListContainer/>} />
+            <Route path="/category/:idCategory" element={<ItemListContainer />} />
 
             <Route path="/detalle/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Carrito />} />
+            <Route path="/checkOut" element={<Form/>} />
             <Route path="/comoComprar" element={<div>Como Comprar</div>} />
           </Routes>
         </div>
