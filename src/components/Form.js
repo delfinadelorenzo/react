@@ -7,6 +7,7 @@ import { addDoc, collection } from "firebase/firestore";
 import db from '../firebase/firebase';
 import { getFirestore } from "firebase/firestore";
 import { Typography } from "@mui/material";
+import './Form.scss'
 
 export default function FormPropsTextFields() {
     const [nombre, setNombre] = useState("");
@@ -18,7 +19,7 @@ export default function FormPropsTextFields() {
     const [orderId, setOrderId] = useState("");
     const [finCompra, setFinCompra] = useState(false);
 
-    const { cart, addItem } = useContext(CartContext);
+    const { cart, total } = useContext(CartContext);
 
    
     const buyingDate = new Date();
@@ -35,7 +36,7 @@ export default function FormPropsTextFields() {
             },
 
             items: {
-                cart: [...cart],
+                cart: [...cart.addedItems],
             },
 
             date: {
@@ -43,12 +44,10 @@ export default function FormPropsTextFields() {
             },
 
             total: {
-                total: addItem,
+                total: total,
             },
         };
-
-        const db = getFirestore();
-
+        
         const ordersCollection = collection(db, "orders");
 
         addDoc(ordersCollection, nuevaOrden)
@@ -76,6 +75,14 @@ export default function FormPropsTextFields() {
             autoComplete="off"
         >
             <div>
+                <div className="e-shop">
+                    <h3>
+                        E-shop
+                    </h3>
+                    <p>
+                        *Complete el formulario para finalizar su compra
+                    </p>
+                </div>
                 <TextField
                     required
                     id="standard-required"
@@ -88,7 +95,7 @@ export default function FormPropsTextFields() {
                 />
                 <TextField
                     id="standard-required"
-                    type="text"
+                    type="email"
                     label="E-mail"
                     autoComplete="E-mail"
                     defaultValue="@"
@@ -99,7 +106,7 @@ export default function FormPropsTextFields() {
                 <TextField
                     id="standard-required"
                     label="Direccion"
-                    type="address"
+                    type="numbers"
                     autoComplete="Dirección"
                     variant="standard"
                     value={direccion}
@@ -110,6 +117,7 @@ export default function FormPropsTextFields() {
                     id="standard-required"
                     label="Teléfono"
                     variant="standard"
+                    type='number'
                     value={telefono}
                     onChange={(event) => setTelefono(event.target.value)}
                 />
@@ -121,7 +129,7 @@ export default function FormPropsTextFields() {
                 m={5}
                 size="small"
             >
-                Enviar datos
+                Comprar
             </Button>
 
             {finCompra && (

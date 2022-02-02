@@ -12,7 +12,7 @@ import { bikinis } from "./components/data";
 import db from './firebase/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { fileUpload } from './firebase/fileUpload'
-
+import Home from './components/Home';
 
 function App() {
 
@@ -34,7 +34,7 @@ function App() {
           <NavBar />
           {/* {<button onClick={arrayUpload}>subir cosas</button>}   */}
           <Routes>
-            <Route path="/" element={<div>HOME</div>} />
+            <Route path="/" element={<Home/>} />
             <Route path="/category/:idCategory" element={<ItemListContainer />} />
 
             <Route path="/detalle/:id" element={<ItemDetailContainer />} />
