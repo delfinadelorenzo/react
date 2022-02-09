@@ -3,6 +3,7 @@ import { Card, Container, Col, Row } from 'react-bootstrap'
 import './home.scss'
 import { FaTruck, FaUndo , FaCreditCard} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 export default function Home() {
     return (
@@ -44,6 +45,11 @@ export default function Home() {
                     </Col>
                 </Row>
             </Container>
+            <br>
+            </br>
+            <div>
+                <Footer/>
+            </div>
         </div>
 
     )

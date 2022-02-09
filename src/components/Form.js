@@ -8,6 +8,7 @@ import db from '../firebase/firebase';
 import { getFirestore } from "firebase/firestore";
 import { Typography } from "@mui/material";
 import './Form.scss'
+import Footer from '../components/Footer'
 
 export default function FormPropsTextFields() {
     const [nombre, setNombre] = useState("");
@@ -21,7 +22,7 @@ export default function FormPropsTextFields() {
 
     const { cart, total } = useContext(CartContext);
 
-   
+
     const buyingDate = new Date();
 
     const enviarDatos = () => {
@@ -47,7 +48,7 @@ export default function FormPropsTextFields() {
                 total: total,
             },
         };
-        
+
         const ordersCollection = collection(db, "orders");
 
         addDoc(ordersCollection, nuevaOrden)
@@ -65,7 +66,8 @@ export default function FormPropsTextFields() {
     };
     console.log(enviarDatos);
     return (
-        <Box
+        <div>
+           <Box
             m={15}
             component="form"
             sx={{
@@ -73,7 +75,7 @@ export default function FormPropsTextFields() {
             }}
             noValidate
             autoComplete="off"
-        >
+           >
             <div>
                 <div className="e-shop">
                     <h3>
@@ -142,6 +144,13 @@ export default function FormPropsTextFields() {
                     </Typography>
                 </Box>
             )}
-        </Box>
+          </Box>
+
+          <div>
+              <Footer/>
+          </div>
+        </div>
+
+
     );
 }

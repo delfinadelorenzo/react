@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { Link } from 'react-router-dom';
 import { Button } from "react-bootstrap";
-
+import Footer from '../components/Footer'
 
 const Carrito = () => {
     const { cart, removeItem, total, clear, cantItems } = useContext(CartContext);
@@ -28,7 +28,12 @@ const Carrito = () => {
                     Check out
                 </Button >
             </Link>
+
+            <div>
+            <Footer/>
+            </div>
         </div>
+
     );
 };
 
