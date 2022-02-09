@@ -1,9 +1,10 @@
 import React from 'react'
 import { Card, Container, Col, Row } from 'react-bootstrap'
 import './home.scss'
-import { FaTruck, FaUndo , FaCreditCard} from 'react-icons/fa'
+import { FaTruck, FaUndo, FaCreditCard } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
+import { MDBCard, MDBCardBody, MDBCardUp, MDBAvatar, MDBRow, MDBCol, MDBIcon } from 'mdbreact';
 
 export default function Home() {
     return (
@@ -28,19 +29,19 @@ export default function Home() {
                 <Row>
                     <Col sm>
                         <a >
-                            <Link to={'/comocomprar'}  className='iconHome' ><FaTruck /> Envios a todo el país</Link>
-                                                         
-                        </a>
-                    </Col>
-                    <Col sm>
-                        <a>
-                            <Link to={'/comocomprar'} className='iconHome' > <FaUndo/> Políticas de cambio</Link>
+                            <Link to={'/comocomprar'} className='iconHome' ><FaTruck /> Envios a todo el país</Link>
 
                         </a>
                     </Col>
                     <Col sm>
                         <a>
-                            <Link to={'/comocomprar'} className='iconHome' ><FaCreditCard/> Todos los medios de pago</Link>
+                            <Link to={'/comocomprar'} className='iconHome' > <FaUndo /> Políticas de cambio</Link>
+
+                        </a>
+                    </Col>
+                    <Col sm>
+                        <a>
+                            <Link to={'/comocomprar'} className='iconHome' ><FaCreditCard /> Todos los medios de pago</Link>
                         </a>
                     </Col>
                 </Row>
@@ -48,7 +49,13 @@ export default function Home() {
             <br>
             </br>
             <div>
-                <Footer/>
+                
+
+
+
+            </div>
+            <div>
+                <Footer />
             </div>
         </div>
 

@@ -13,6 +13,7 @@ import db from './firebase/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { fileUpload } from './firebase/fileUpload'
 import Home from './components/Home';
+import ComoComprar from './components/ComoComprar';
 
 function App() {
 
@@ -40,7 +41,7 @@ function App() {
             <Route path="/detalle/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Carrito />} />
             <Route path="/checkOut" element={<Form/>} />
-            <Route path="/comoComprar" element={<div>Como Comprar</div>} />
+            <Route path="/comoComprar" element={<ComoComprar/>} />
           </Routes>
         </div>
       </Router>
