@@ -1,4 +1,4 @@
-import { Row, Col } from "react-bootstrap"
+import { Row, Col, Figure } from "react-bootstrap"
 import ItemCount from "./ItemCount"
 import { useContext } from "react"
 import { Link } from "react-router-dom"
@@ -17,29 +17,42 @@ const ItemDetail = ({ item }) => {
   return (
     <div className="itemBody" >
       <Row>
-        <div>                    
-        <h3 className="titulo" >{item.tittle}</h3>
+        <div>
+          <h3 className="titulo" >{item.tittle}</h3>
         </div>
-        <Col>
-          <img className="fotoProducto" src={item.pictureUrl} alt={item.title} width={200} />
+        <Col lg={true} sm={8}  >
+          <div className="displayFoto">
+            <Figure >
+              <Figure.Image
+                width={500}
+                height={500}
+                alt={item.title}
+                src={item.pictureUrl}
+              />
+            </Figure>
+          </div>
+
+          {/* <img className="fotoProducto"  alt={item.title} width={200} /> */}
+
         </Col>
-        <Col >
+        <Col lg={true} sm={8}>
+
           <div className="detalleProduc" >
-            <p>Detalles del producto 
+            <p>Detalle del producto
             </p>
             <p>  {item.description} </p>
             {/* <p>Stock disponible {item.stock} </p> */}
           </div>
-          <div>
+          <div >
             {isInCart(item.id)
               ?
               <span>Ya esta agregado al carrito</span>
               :
               <ItemCount item={item} onAdd={addItem}></ItemCount>
-              }
+            }
           </div>
           <div>
-          <Link to={"/cart"}>Finalizar Compra</Link>
+            <Link to={"/cart"} className="btnCompra">Finalizar Compra</Link>
           </div>
         </Col>
       </Row>

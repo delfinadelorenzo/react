@@ -7,14 +7,23 @@
 .titulo{
     color: burlywood;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 60px;
+    font-size: 80px;
     margin-bottom: 50px;
+    text-align: center;
 }
-.fotoProducto{
-    width: 50%;
-}
+// .fotoProducto{
+//     width: 50%;
+// }
 .detalleProduc{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: xx-large;
     color: black;
+    text-align: center;
+}
+.displayFoto{
+    direction: rtl;
+}
+.btnCompra{
+    color: black;
+    text-decoration: none;
 }

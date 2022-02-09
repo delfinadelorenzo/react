@@ -3,6 +3,7 @@ import { CartContext } from "./CartContext";
 import { Link } from 'react-router-dom';
 import { Button } from "react-bootstrap";
 
+
 const Carrito = () => {
     const { cart, removeItem, total, clear, cantItems } = useContext(CartContext);
     return (
@@ -13,17 +14,19 @@ const Carrito = () => {
                     <div key={cartItem.id}>
                         <h3>{cartItem.tittle}</h3>
                         <span>Cantidad: {cartItem.cantidad}</span>
-                        <button onClick={() => removeItem(cartItem.id)}>Eliminar</button>
+                        {/* <Button  onClick={() => removeItem(cartItem.id)}>Eliminar</button> */}
+                        <Button variant="outline-dark" onClick={() => removeItem(cartItem.id)}>Eliminar</Button>
                     </div>
                 ))}
             </div>
             <h4>Total: ${total}</h4>
-            {cantItems > 0 && <button onClick={clear}>Vaciar carrito</button>}
+            {cantItems > 0 && <Button variant="outline-dark" onClick={clear}>Vaciar</Button>
+            }
 
             <Link to="/checkOut">
-                <button>
+                <Button variant="outline-dark" >
                     Check out
-                </button>
+                </Button >
             </Link>
         </div>
     );

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 
 
@@ -21,25 +22,25 @@ function ItemCount({onAdd, item}) {
             {count}
           </span>
           <div>
-            <button disabled={count === item.stock} onClick={aumentar}>
+            <Button variant="outline-dark" disabled={count === item.stock} onClick={aumentar}>
               +
-            </button>
+            </Button>
     
-            <button disabled={count === 0} onClick={disminuir}>
+            <Button  variant="outline-dark"  disabled={count === 0} onClick={disminuir}>
               -
-            </button>
+            </Button>
     
             {/* <div>
-              <button onClick={reset}> Reset </button>
+              <Button onClick={reset}> Reset </Button>
             </div> */}
     
             <div>
-              <button
+              <Button variant="outline-dark" 
                 disabled={item.stock === 0}
                 onClick={() => onAdd(item, count)}
               >
                 Agregar al Carrito
-              </button>
+              </Button>
             </div>
           </div>
         </div>

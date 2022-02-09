@@ -15,11 +15,11 @@ code {
 .tittle{
   font-family: sans-serif;
   font-size: 25px;
-  color: pink;
+  color: rgb(14, 13, 13);
   letter-spacing: 5px;
 }
 .precio{
-  color: #df75be;
+  color: hsl(319, 56%, 25%);
     font-size: 22px;
 }
 
@@ -29,4 +29,14 @@ code {
     flex-wrap: wrap!important;
     align-content: space-around!important;
     justify-content: center!important;
+}
+
+.masInfo{
+  font-family: Arial, Helvetica, sans-serif;
+  color: bisque!IMPORTANT;
+}
+.linkColor{
+  color: burlywood!important;
+  text-decoration: none;
+  font-weight: bolder;
 }

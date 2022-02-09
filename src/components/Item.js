@@ -26,8 +26,8 @@ const Item = ({ items }) => {
                     </span>
                   </div>
 
-                  <div>
-                    <Link to={`/detalle/${item.id}`}>+Info</Link>
+                  <div className="masInfo" >
+                    <Link to={`/detalle/${item.id}`} className="linkColor" >Más Info</Link>
                   </div>
                 </Card.Body>
               </Card>
