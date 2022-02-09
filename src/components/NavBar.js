@@ -9,7 +9,7 @@ export default function NavBar() {
   const { cantItems }= useContext (CartContext);
   return (
     <div>
-      <Navbar className='navBar' >
+      <Navbar className='navBar' expand="lg">
         <Container fluid >
           <Navbar.Brand> <Link to="/" className='HomePage' >B R A V E  Swimwear </Link></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -20,7 +20,7 @@ export default function NavBar() {
                 <NavDropdown.Item > <Link to="/category/enterizas" className='linkTo' > Enterizas</Link>     </NavDropdown.Item>
                 <NavDropdown.Item > <Link to="/category/summer" className='linkTo' >Summer Sale! </Link>   </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link> <Link to="/comocomprar" className='linkTo' >Como comprar</Link> </Nav.Link>
+              <Nav.Link> <Link to="/comocomprar" className='linkTo' >+ Info</Link> </Nav.Link>
             </Nav>
             <Link to="/cart"  className='linkTo'>
               <CartWidget />
