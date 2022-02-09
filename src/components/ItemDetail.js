@@ -5,6 +5,8 @@ import { Link } from "react-router-dom"
 import { CartContext } from "./CartContext"
 import "./ItemDetail.scss"
 import Footer from '../components/Footer'
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+
 
 
 const ItemDetail = ({ item }) => {
@@ -19,51 +21,49 @@ const ItemDetail = ({ item }) => {
     <div>
 
       <div className="itemBody" >
-        <Row>
-          <div>
-            <h3 className="titulo" >{item.tittle}</h3>
-          </div>
-          <Col lg={true} sm={8}  >
-            <div className="displayFoto">
-              <Figure >
-                <Figure.Image
-                  width={500}
-                  height={500}
-                  alt={item.title}
-                  src={item.pictureUrl}
-                />
-              </Figure>
-            </div>
 
-            {/* <img className="fotoProducto"  alt={item.title} width={200} /> */}
+        <div>
+          <h3 className="titulo" >{item.tittle}</h3>
+        </div>
+        <MDBContainer>
+          <MDBRow>
+            <MDBCol size="8">
+              
+              <div className="detalleProduc" >
+                <p>Detalle del producto
+                </p>
+                <p>  {item.description} </p>
+                {/* <p>Stock disponible {item.stock} </p> */}
+              </div>
+              <div >
+                {isInCart(item.id)
+                  ?
+                  <span>Ya esta agregado al carrito</span>
+                  :
+                  <ItemCount item={item} onAdd={addItem}></ItemCount>
+                }
+              </div>
+              <div>
+                <Link to={"/cart"} className="btnCompra">Finalizar Compra</Link>
+              </div>
 
-          </Col>
-          <Col lg={true} sm={8}>
-
-            <div className="detalleProduc" >
-              <p>Detalle del producto
-              </p>
-              <p>  {item.description} </p>
-              {/* <p>Stock disponible {item.stock} </p> */}
-            </div>
-            <div >
-              {isInCart(item.id)
-                ?
-                <span>Ya esta agregado al carrito</span>
-                :
-                <ItemCount item={item} onAdd={addItem}></ItemCount>
-              }
-            </div>
-            <div>
-              <Link to={"/cart"} className="btnCompra">Finalizar Compra</Link>
-            </div>
-          </Col>
-        </Row>
+            </MDBCol>
+            <MDBCol size="4"><Figure >
+              <Figure.Image
+                width={500}
+                height={500}
+                alt={item.title}
+                src={item.pictureUrl}
+              />
+            </Figure></MDBCol>
+          </MDBRow>
+        </MDBContainer>
+        
       </div>
 
 
       <div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
 

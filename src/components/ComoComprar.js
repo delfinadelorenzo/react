@@ -81,6 +81,24 @@ const ComoComprar = () => {
                     <MDBCol size="4"></MDBCol>
                 </MDBRow>
             </MDBContainer>
+            <div>
+                <img src='/MediosdePago.png'></img>
+            </div>
+            <br></br>
+            <MDBContainer>
+                <MDBRow>
+                    <MDBCol size="8">
+                        <p>Medios de Pago</p>
+                        <ul>
+                            <li>En nuestra tienda online utilizamos Mercado Pago o Cuenta DNI.</li>
+                            <li>Trabajamos con 3,6 o 12 cuotas sin interés con trajetas de Crédito.</li>
+                            <li>Podés optar por la opción pago en efectivo a través de Transferencia Bancaria o Cuenta DNI.</li>
+                        </ul>
+
+                    </MDBCol>
+                    <MDBCol size="4"></MDBCol>
+                </MDBRow>
+            </MDBContainer>
 
         </div>
 
